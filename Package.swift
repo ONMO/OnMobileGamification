@@ -9,7 +9,6 @@ let package = Package(
     products: [
         .library(
             name: "OnMobileGamification",
-            type: .dynamic,
             targets: ["OnMobileGamificationPackage"]),
     ],
     targets: [
