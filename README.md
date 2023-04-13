@@ -10,6 +10,12 @@
     - [Next Template Details](#next-template-details)
     - [User Reward View](#user-reward-view)
     - [Leader Board](#leader-board)
+- [Object Details](#object-details)
+    - [GamificationClientHandler](#gamificationclienthandler)
+- [Enumerations](#enumerations)
+    - [GamificationCallBackListenerType](#gamificationcallbacklistenertype)
+    - [GamificationEventListenerType](#gamificationeventlistenertype)
+    - [GamificationError](#gamificationerror)
 <!-- - [Documentation](#documentation) -->
 - [License](#license)
 - [Copyright](#copyright)
@@ -173,31 +179,147 @@ static func leaderBoardFor(
  - didPresent : Provide the state value when to present or dismiss the template. If true presents the leadeboard
 ```
 
-### Object Details
+## Object Details
 
-#### GamificationClientHandler
+### GamificationClientHandler
 ```
 This is a client handler class to perform the actions based on framework responses.
 ```
 
 #### Instance Properties
 
-    var callBackInfo: GamificationClientCallback?
-    
+var callBackInfo: GamificationClientCallback?
 ```
 Provides the extra information required to handle or know the detailed info
 ```
 
-    var callBackListenerType: GamificationCallBackListenerType?
-    
+var callBackListenerType: GamificationCallBackListenerType?    
 ```
 Provides the detail of call back type
 ```
 
-    var eventListenerType: GamificationEventListenerType?
-    
+var eventListenerType: GamificationEventListenerType?    
 ```
 Provides the detail of event type
+```
+
+#### Instance Methods
+
+func dismiss()
+```
+Dismisses the SDK/Framework view
+```
+
+## Enumerations
+
+### GamificationCallBackListenerType
+```
+Details of the available Callback types
+```
+#### Enumeration Cases
+case failed(GamificationError)
+```
+Informs the client that the template actions are faliled with an error and provides the error information
+```
+
+case rewardLoose
+```
+Informs the client that the template actions are performed and the user loose the reward
+```
+
+case rewardWon
+```
+Informs the client that the template actions are performed and the user won the reward
+```
+
+#### Instance Properties
+var message: String
+```
+Detailed message for particular callback type
+```
+
+### GamificationEventListenerType
+```
+Details of the available Event types
+```
+
+#### Enumeration Cases
+case mediaPause
+```
+Informs that the audio/video is paused or stopped
+```
+
+case mediaPlay
+```
+Informs that the audio/video is started or about to start playing
+```
+
+case sdkClose
+```
+Informs that the sdk is close
+```
+
+case sdkOpen
+```
+Informs that the sdk is open
+```
+
+#### Instance Properties
+var message: String
+```
+Detailed message for particluar event type
+```
+
+### GamificationError
+```
+Details of all available error types
+```
+
+#### Enumeration Cases
+case errorHandled
+```
+Informs the cleint that the error is occured and it is already handled by sdk
+```
+
+case invalidKey
+```
+Informs the the authentication key provided is not correct
+```
+
+case invalidUser
+```
+Informs the the user key provided is not correct or expired
+```
+
+case noTemplate
+```
+Informs the client that the template requested is not supported or the template is not available to user at that moment
+```
+
+case notDefined(String)
+```
+Provides the undefined use cases with the error description
+```
+
+case notInitialized
+```
+Informs the the intialization is failed by any other scenarios
+```
+
+case unAuthorisedClient
+```
+Informs that the client is an unauthorised either the identifier of app is not matched or not registered. Please check with OnMobile to know the identifier or to add the app identifier in sdk
+```
+
+case unknown
+```
+Unhandled cases
+```
+
+#### Instance Properties
+var message: String
+```
+Detailed message for particluar error type
 ```
 
 <!-- ## Documentation
