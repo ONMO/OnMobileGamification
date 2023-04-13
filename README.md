@@ -7,7 +7,9 @@
 - [Integration](#integration)
 - [Implementation](#implementation)
     - [Initialization](#initialization)
-    - [User Reward](#user-reward)
+    - [Next Template Details](#next-template-details)
+    - [User Reward View](#user-reward-view)
+    - [Leader Board](#leader-board)
 <!-- - [Documentation](#documentation) -->
 - [License](#license)
 - [Copyright](#copyright)
@@ -71,26 +73,131 @@ It is mandatory to register the app bundle identifier with the sdk before using 
 
 ### Initialization
 
+#### Summary
+
 ```
-Gamification.initialize(
-            with: <Auth Key>,
-            and: <User Key>,
-            languageCode: <languageCode>,
-            succedded: {
-            /*Success callback*/
-            },
-            failed: { _ in 
-            /*handle error*/ 
-            }
-        )
+Initialization method to start using the framework.
 ```
 
-### User Reward
+#### Declaration
+
 ```
-Gamification.userRewardView(
-            didPresent: <Binding true/false>, {
-               /*Handle callback*/
-            })
+static func initialize(
+                with authKey: String, 
+                and userKey: String, 
+                languageCode: String = "en", 
+                for environment: APIEnvironment = .production, 
+                succedded success: @escaping (() -> ()), 
+                failed fail: @escaping ((GamificationError) -> ()))
+```
+
+#### Parameters
+
+```
+ - authKey : Provide the authentication key to intialize the sdk
+ - userKey : Provide the user token to initialize and to connect to fetch the rewards for the user
+ - languageCode : Provide the language code to see the content in that localization
+ - success : It is a callback to handle the successfull initialization
+ - fail : It is a callback to handle the failure of initialization, provides the detailed error to handle
+```
+
+### Next Template Details
+
+#### Summary
+
+```
+Provides next user active template details
+```
+
+#### Declaration
+
+```
+static func nextTemplateDetail(
+                succedded success: @escaping ((GamificationClientCallback) -> ()), 
+                failed fail: @escaping ((GamificationError) -> ()))
+
+```
+
+#### Parameters
+
+```
+ - success : It is a sucess callback with the required details of next template details in GamificationClientCallback object
+ - fail : It is a callback to handle the failure of next active template api, provides the detailed error to handle
+```
+
+### User Reward View
+
+#### Summary
+
+```
+Provides the user active template detailed view to proceed further gamification of particular type.
+```
+
+#### Declaration
+
+```
+static func userRewardView(
+                name: String, 
+                didPresent: Binding<Bool> = .constant(false), 
+                _ handler: @escaping ((GamificationClientHandler) -> ())) -> some View
+```
+
+#### Parameters
+
+```
+ - name : Provide the rule name to fetch the details
+ - didPresent : Provide the state value when to present or dismiss the template. If true presents the template
+ - handler : It is a callback to handle further on client side, for detailed info please check GamificationClientHandler
+```
+
+### Leader Board
+
+#### Summary
+
+```
+Provides leaderboard details for the provide rule name
+```
+
+#### Declaration
+
+```
+static func leaderBoardFor(
+                _ name: String, 
+                didPresent: Binding<Bool> = .constant(false)) -> some View
+```
+
+#### Parameters
+
+```
+ - name : Provide the rule name to fetch the details
+ - didPresent : Provide the state value when to present or dismiss the template. If true presents the leadeboard
+```
+
+### Object Details
+
+#### GamificationClientHandler
+```
+This is a client handler class to perform the actions based on framework responses.
+```
+
+#### Instance Properties
+
+    var callBackInfo: GamificationClientCallback?
+    
+```
+Provides the extra information required to handle or know the detailed info
+```
+
+    var callBackListenerType: GamificationCallBackListenerType?
+    
+```
+Provides the detail of call back type
+```
+
+    var eventListenerType: GamificationEventListenerType?
+    
+```
+Provides the detail of event type
 ```
 
 <!-- ## Documentation
