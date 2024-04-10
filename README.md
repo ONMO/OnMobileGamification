@@ -139,11 +139,13 @@ static func nextTemplateDetail(
 Provides the user active template detailed view to proceed further gamification of particular type.
 ```
 
-#### Declaration
+#### Declaration for UIKIT
 
 ```
-static func userRewardView(
-                name: String, 
+static func openRewardViewWithUIKit(
+                name: String,
+                viewDisplayType : ViewDisplayType.popup,
+                viewController : UIViewController,
                 didPresent: Binding<Bool> = .constant(false), 
                 _ handler: @escaping ((GamificationClientHandler) -> ())) -> some View
 ```
@@ -152,6 +154,27 @@ static func userRewardView(
 
 ```
  - name : Provide the rule name to fetch the details
+ - viewDisplayType : Provide the viewDisplayType to decide the appearance(popup or fullscreen)
+ - viewController : Provide the viewController to display the reward view
+ - didPresent : Provide the state value when to present or dismiss the template. If true presents the template
+ - handler : It is a callback to handle further on client side, for detailed info please check GamificationClientHandler
+```
+
+#### Declaration for SWIFTUI
+
+```
+static func openRewardViewWithSwiftUI(
+                name: String,
+                viewDisplayType : ViewDisplayType.popup,
+                didPresent: Binding<Bool> = .constant(false), 
+                _ handler: @escaping ((GamificationClientHandler) -> ())) -> some View
+```
+
+#### Parameters
+
+```
+ - name : Provide the rule name to fetch the details
+ - viewDisplayType : Provide the viewDisplayType to decide the appearance(popup or fullscreen)
  - didPresent : Provide the state value when to present or dismiss the template. If true presents the template
  - handler : It is a callback to handle further on client side, for detailed info please check GamificationClientHandler
 ```
@@ -179,6 +202,32 @@ static func leaderBoardFor(
  - didPresent : Provide the state value when to present or dismiss the template. If true presents the leadeboard
 ```
 
+### Reward History
+
+#### Summary
+
+```
+Provides Reward history list details
+```
+
+#### Declaration
+
+```
+static func getRewardHistoryList(
+                pageSize: Int,
+                pageNumber: Int, 
+                succedded success: @escaping ((RewardHistory) -> ()), 
+                failed fail: @escaping ((GamificationError) -> ()))
+```
+
+#### Parameters
+
+```
+ - pageSize : Provide the pageSize to determined response count in one page.
+ - pageNumber : Provide the pageNumber to get the number of response page by page
+ - succedded : It is a callback to handle the successfull response
+ - fail : It is a callback to handle the failure of methos, provides the detailed error to handle
+```
 ## Object Details
 
 ### GamificationClientHandler
