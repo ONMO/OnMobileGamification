@@ -357,9 +357,10 @@ Details of all available error types
 ```
 
 #### Enumeration Cases
-case errorHandled
+
+case unAuthorisedClient
 ```
-Informs the cleint that the error is occured and it is already handled by sdk
+Informs that the client is an unauthorised either the identifier of app is not matched or not registered. Please check with OnMobile to know the identifier or to add the app identifier in sdk
 ```
 
 case invalidKey
@@ -369,7 +370,27 @@ Informs the the authentication key provided is not correct
 
 case invalidUser
 ```
-Informs the the user key provided is not correct or expired
+Informs the the user key provided is not correct
+```
+
+case notInitialized
+```
+Informs the the intialization is failed by any other scenarios
+```
+
+case invalidRuleName
+```
+Informs the rule name provided is not valid or correct
+```
+
+case tokenExpired
+```
+Informs the client that the token is expired
+```
+
+case errorHandled
+```
+Informs the cleint that the error is occured and it is already handled by sdk
 ```
 
 case noTemplate
@@ -380,16 +401,6 @@ Informs the client that the template requested is not supported or the template 
 case notDefined(String)
 ```
 Provides the undefined use cases with the error description
-```
-
-case notInitialized
-```
-Informs the the intialization is failed by any other scenarios
-```
-
-case unAuthorisedClient
-```
-Informs that the client is an unauthorised either the identifier of app is not matched or not registered. Please check with OnMobile to know the identifier or to add the app identifier in sdk
 ```
 
 case unknown
