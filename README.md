@@ -7,6 +7,7 @@
 - [Integration](#integration)
 - [Implementation](#implementation)
     - [Initialization](#initialization)
+    - [Update Token](#update-token)
     - [Next Template Details](#next-template-details)
     - [User Reward View](#user-reward-view)
     - [Leader Board](#leader-board)
@@ -105,6 +106,37 @@ static func initialize(
  - languageCode : Provide the language code to see the content in that localization
  - success : It is a callback to handle the successfull initialization
  - fail : It is a callback to handle the failure of initialization, provides the detailed error to handle
+```
+
+### Update Token
+
+#### Summary
+
+```
+Update or re intialize with the latest or updated user token during token related error.
+```
+
+#### Declaration
+
+```
+static func update(
+                userKey: String, 
+                succedded success: @escaping (() -> ()), 
+                failed fail: @escaping ((GamificationError) -> ()))
+```
+
+#### Parameters
+
+```
+ - userKey : Provide the user token to update and to connect to fetch the rewards for the user
+ - success : It is a callback to handle the successfull updation of user token
+ - fail : It is a callback to handle the failure of updation, provides the detailed error to handle on parent app
+```
+
+#### Note
+
+```
+Parent App has to handle closing the framework views during the success or failure and call the previous methods when the token related error has received.
 ```
 
 ### Next Template Details
