@@ -224,7 +224,8 @@ Provides leaderboard details for the provide rule name
 ```
 static func leaderBoardFor(
                 _ name: String, 
-                didPresent: Binding<Bool> = .constant(false)) -> some View
+                didPresent: Binding<Bool> = .constant(false),
+                didShowNavigation: Bool = false) -> some View
 ```
 
 #### Parameters
@@ -232,6 +233,7 @@ static func leaderBoardFor(
 ```
  - name : Provide the rule name to fetch the details
  - didPresent : Provide the state value when to present or dismiss the template. If true presents the leadeboard
+ - didShowNavigation : Provide the preference of showing navigation with title and back button
 ```
 
 ### Reward History
