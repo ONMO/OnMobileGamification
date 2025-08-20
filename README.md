@@ -416,13 +416,13 @@ var message: String
 Detailed message for particluar error type
 ```
 
-<!-- ## Documentation
+ ## Documentation
 
-### Xcode Document
-Download the [doccarchive][docc] from this [path][docc] and open in Xcode for detailed documentation
+<!-- ### Xcode Document
+Download the [doccarchive][docc] from this [path][docc] and open in Xcode for detailed documentation -->
 
 ### Github Pages
-Avail the github page at this [location][githubpage] if browser didn't support please use [Xcode Document][docc] -->
+Avail the github page at this [location][githubpage] <!-- if browser didn't support please use [Xcode Document][docc] -->
 
 ## License
 MIT
@@ -439,5 +439,5 @@ MIT
 
 [cocoapods]: <https://guides.cocoapods.org/using/getting-started.html#getting-started>
 [docc]: <https://bitbucket.org/onmoec/onmobilegamificationpackage/src/21a2b60791a5/docc/OnMobileGamificationPackage.doccarchive.zip?>
-[githubpage]: <https://onmo.github.io/OnMobileGamificationPackage/documentation/onmobilegamificationpackage>
+[githubpage]: <https://onmo.github.io/OnMobileGamification/documentation/onmobilegamificationsdk/gamification>
 
