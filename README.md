@@ -66,7 +66,7 @@ import OnMobileGamification
 It is mandatory to register the app bundle identifier with the sdk before using it.
 
 ## Implementation
-
+`Open below links in new tab to have better experience and to access this page easily & parallely`
 - [Initialization][doc-initialization]
 - [Update Token][doc-update-token]
 - [Next Template Details][doc-next-template-details]
