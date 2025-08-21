@@ -105,6 +105,6 @@ MIT
 [doc-other-methods]: <https://onmo.github.io/OnMobileGamification/documentation/onmobilegamificationsdk/gamification>
 [doc-initialization]: <https://onmo.github.io/OnMobileGamification/documentation/onmobilegamificationsdk/gamification/initialize(with:and:languagecode:for:succedded:failed:)>
 [doc-update-token]: <https://onmo.github.io/OnMobileGamification/documentation/onmobilegamificationsdk/gamification/update(userkey:succedded:failed:)>
-[doc-next-template-details]: <https://onmo.github.io/OnMobileGamification/documentation/onmobilegamificationsdk/gamification/nextTemplateDetail(_:succedded:failed:)>
-[doc-user-reward-view]: <https://onmo.github.io/OnMobileGamification/documentation/onmobilegamificationsdk/gamification/openRewardViewWithSwiftUI(name:isDailyStreak:viewDisplayType:didPresent:_:)>
-[doc-leader-board]: <https://onmo.github.io/OnMobileGamification/documentation/onmobilegamificationsdk/gamification/leaderBoardFor(_:didPresent:didShowNavigation:)>
+[doc-next-template-details]: <https://onmo.github.io/OnMobileGamification/documentation/onmobilegamificationsdk/gamification/nexttemplatedetail(_:succedded:failed:)>
+[doc-user-reward-view]: <https://onmo.github.io/OnMobileGamification/documentation/onmobilegamificationsdk/gamification/openrewardviewwithswiftui(name:isdailystreak:viewdisplaytype:didpresent:_:)>
+[doc-leader-board]: <https://onmo.github.io/OnMobileGamification/documentation/onmobilegamificationsdk/gamification/leaderboardfor(_:didpresent:didshownavigation:)>
