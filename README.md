@@ -70,8 +70,12 @@ It is mandatory to register the app bundle identifier with the sdk before using 
 - [Initialization][doc-initialization]
 - [Update Token][doc-update-token]
 - [Next Template Details][doc-next-template-details]
-- [User Reward View][doc-user-reward-view]
-- [Leader Board][doc-leader-board]
+- **User Reward View**
+  - [SwiftUI Method][doc-user-reward-view]
+  - [UIKit Method][doc-user-reward-view-uikit]
+- **Leader Board**
+  - [SwiftUI Method][doc-leader-board]
+  - [UIKit Method][doc-leader-board-uikit]
 - [Other Methods][doc-other-methods]
 
 ## Documentation
@@ -102,4 +106,6 @@ MIT
 [doc-update-token]: <https://onmo.github.io/OnMobileGamification/documentation/onmobilegamificationsdk/gamification/update(userkey:succedded:failed:)>
 [doc-next-template-details]: <https://onmo.github.io/OnMobileGamification/documentation/onmobilegamificationsdk/gamification/nexttemplatedetail(_:succedded:failed:)>
 [doc-user-reward-view]: <https://onmo.github.io/OnMobileGamification/documentation/onmobilegamificationsdk/gamification/openrewardviewwithswiftui(name:isdailystreak:viewdisplaytype:didpresent:_:)>
+[doc-user-reward-view-uikit]: <https://onmo.github.io/OnMobileGamification/documentation/onmobilegamificationsdk/gamification/openrewardviewwithuikit(name:isdailystreak:viewdisplaytype:backgroundcolor:viewcontroller:_:)>
 [doc-leader-board]: <https://onmo.github.io/OnMobileGamification/documentation/onmobilegamificationsdk/gamification/leaderboardfor(_:didpresent:didshownavigation:)>
+[doc-leader-board-uikit]: <https://onmo.github.io/OnMobileGamification/documentation/onmobilegamificationsdk/gamification/openleaderboardwithuikit(rulename:viewcontroller:didshownavigation:)>
