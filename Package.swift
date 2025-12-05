@@ -25,7 +25,7 @@ let package = Package(
             checksum: "f22e4522b450c3dc9518827ff4d1f41276b8ca9c64f3ecf3c06be1e6fde46916"
         ),
         .target(
-            name: "OnMobileGamificationSDKWrapper",
+            name: "OnMobileGamificationWrapper",
             dependencies: [
                 "OnMobileGamificationSDK",
                 .product(name: "OnMobileGamificationCore", package: "OnMobileGamificationCore")
@@ -33,4 +33,3 @@ let package = Package(
         ),
     ]
 )
-
