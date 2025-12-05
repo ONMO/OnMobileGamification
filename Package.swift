@@ -9,13 +9,13 @@ let package = Package(
     products: [
         .library(
             name: "OnMobileGamification",
-            targets: ["OnMobileGamificationPackage"]),
+            targets: ["OnMobileGamificationSDK"]),
     ],
     targets: [
         .binaryTarget(
-            name: "OnMobileGamificationPackage",
-            url: "https://github.com/ONMO/OnMobileGamification/releases/download/1.0.0/OnMobileGamificationPackage.xcframework.zip",
-            checksum: "70695d376ad2e5c1f8500d019341df339c022637542e7e2f1d8973a7530a943d"
+            name: "OnMobileGamificationSDK",
+            url: "https://github.com/ONMO/OnMobileGamification/releases/download/1.0.16/OnMobileGamificationSDK.xcframework.zip",
+            checksum: "f22e4522b450c3dc9518827ff4d1f41276b8ca9c64f3ecf3c06be1e6fde46916"
         ),
     ]
 )
