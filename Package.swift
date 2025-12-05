@@ -11,6 +11,9 @@ let package = Package(
             name: "OnMobileGamification",
             targets: ["OnMobileGamificationSDK"]),
     ],
+    dependencies: [
+        .package(url: "https://github.com/ONMO/OnMobileGamificationCore", exact: "1.0.28")
+    ],
     targets: [
         .binaryTarget(
             name: "OnMobileGamificationSDK",
