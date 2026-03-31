@@ -66,7 +66,7 @@ $ pod install
   
   ```bash
   dependencies: [
-         .package(url: "https://github.com/ONMO/OnMobileRBT.git", exact: "x.x.x"),
+         .package(url: "https://github.com/ONMO/OnMobileGamification.git", exact: "x.x.x"),
     ]
   ```
 ## Integration
