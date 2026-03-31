@@ -62,7 +62,7 @@ $ pod install
   
   OnMobile SDK can be integrated to any iOS project through Swift Package Manger. You can refer [Swift Package Manger](https://swift.org/package-manager/) for more details.
 
-  Once you have your Swift package set up, adding OnMobileRBTSDK as a dependency is as easy as adding it to the dependencies value of your Package.swift.
+  Once you have your Swift package set up, adding OnMobileGamification as a dependency is as easy as adding it to the dependencies value of your Package.swift.
   
   ```bash
   dependencies: [
